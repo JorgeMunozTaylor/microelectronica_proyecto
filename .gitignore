@@ -1,3 +1,6 @@
 Proyecto_final.pdf
 bin
 logs
+*.raw
+*.log
+*.plt

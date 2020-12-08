@@ -1,0 +1,26 @@
+*** SPICE deck for cell NOR3{lay} from library parteD
+*** Created on sáb dic 05, 2020 20:26:39
+*** Last revised on mar dic 08, 2020 12:00:47
+*** Written on mar dic 08, 2020 12:01:06 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+
+*** TOP LEVEL CELL: NOR3{lay}
+Mnmos@7 Y A gnd gnd N L=1U W=1U AS=1.533P AD=1.5P PS=5.733U PD=4.9U
+Mnmos@8 Y B gnd gnd N L=1U W=1U AS=1.533P AD=1.5P PS=5.733U PD=4.9U
+Mnmos@9 Y C gnd gnd N L=1U W=1U AS=1.533P AD=1.5P PS=5.733U PD=4.9U
+Mpmos@6 net@109 A vdd vdd P L=1U W=2U AS=5.4P AD=2.4P PS=14.4U PD=6.4U
+Mpmos@7 net@112 B net@109 vdd P L=1U W=2U AS=2.4P AD=2.4P PS=6.4U PD=6.4U
+Mpmos@8 Y C net@112 vdd P L=1U W=2U AS=2.4P AD=1.5P PS=6.4U PD=4.9U
+
+* Spice Code nodes in cell cell 'NOR3{lay}'
+vdd Vdd 0 DC 5
+v1 A 0 pulse (0 5 10nS 0.1pS 0.1pS 8nS 24nS)
+v2 B 0 pulse (0 5 18nS 0.1pS 0.1pS 24nS 48nS)
+v3 C 0 pulse (0 5 42nS 0.1pS 0.1pS 48nS 96nS)
+.MODEL P PMOS
+.MODEL N NMOS
+.TRAN 0 100N
+.end
+.END

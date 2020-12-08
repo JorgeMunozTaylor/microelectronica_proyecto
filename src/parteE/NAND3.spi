@@ -1,0 +1,27 @@
+*** SPICE deck for cell NAND3{lay} from library parteD
+*** Created on sáb dic 05, 2020 22:47:12
+*** Last revised on mar dic 08, 2020 11:49:41
+*** Written on mar dic 08, 2020 11:51:14 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+
+
+*** TOP LEVEL CELL: NAND3{lay}
+Mnmos@0 net@5 A Y gnd N L=1U W=1U AS=2.1P AD=1.2P PS=5.9U PD=4.4U
+Mnmos@1 net@34 B net@5 gnd N L=1U W=1U AS=1.2P AD=1.2P PS=4.4U PD=4.4U
+Mnmos@2 gnd C net@34 gnd N L=1U W=1U AS=1.2P AD=2.2P PS=4.4U PD=8.4U
+Mpmos@0 vdd A Y vdd P L=1U W=2U AS=2.1P AD=3.4P PS=5.9U PD=9.067U
+Mpmos@1 Y B vdd vdd P L=1U W=2U AS=3.4P AD=2.1P PS=9.067U PD=5.9U
+Mpmos@2 vdd C Y vdd P L=1U W=2U AS=2.1P AD=3.4P PS=5.9U PD=9.067U
+
+* Spice Code nodes in cell cell 'NAND3{lay}'
+vdd Vdd 0 DC 5
+v1 A 0 pulse (0 5 10nS 0.1pS 0.1pS 8nS 24nS)
+v2 B 0 pulse (0 5 19nS 0.1pS 0.1pS 24nS 48nS)
+v3 C 0 pulse (0 5 43nS 0.1pS 0.1pS 48nS 96nS)
+.MODEL P PMOS
+.MODEL N NMOS
+.TRAN 0 100N
+.end
+.END

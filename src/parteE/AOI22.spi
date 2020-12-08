@@ -1,0 +1,29 @@
+*** SPICE deck for cell AOI22{lay} from library parteD
+*** Created on dom dic 06, 2020 08:19:38
+*** Last revised on lun dic 07, 2020 21:50:37
+*** Written on lun dic 07, 2020 21:50:48 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+
+*** TOP LEVEL CELL: AOI22{lay}
+Mnmos@0 gnd D net@2 gnd N L=1U W=1U AS=1.2P AD=1.7P PS=4.4U PD=6.4U
+Mnmos@2 gnd B net@36 gnd N L=1U W=1U AS=1.2P AD=1.7P PS=4.4U PD=6.4U
+Mnmos@3 net@36 A Y gnd N L=1U W=1U AS=1.8P AD=1.2P PS=5.4U PD=4.4U
+Mnmos@4 net@2 C Y gnd N L=1U W=1U AS=1.8P AD=1.2P PS=5.4U PD=4.4U
+Mpmos@0 vdd A net@108 vdd P L=1U W=2U AS=2.4P AD=3.9P PS=6.4U PD=10.4U
+Mpmos@1 net@108 B vdd vdd P L=1U W=2U AS=3.9P AD=2.4P PS=10.4U PD=6.4U
+Mpmos@2 net@108 D Y vdd P L=1U W=2U AS=1.8P AD=2.4P PS=5.4U PD=6.4U
+Mpmos@3 Y C net@108 vdd P L=1U W=2U AS=2.4P AD=1.8P PS=6.4U PD=5.4U
+
+* Spice Code nodes in cell cell 'AOI22{lay}'
+vdd Vdd 0 DC 5
+v1 A 0 pulse (0 5 10nS 0.1pS 0.1pS 8nS 24nS)
+v2 B 0 pulse (0 5 19nS 0.1pS 0.1pS 24nS 48nS)
+v3 C 0 pulse (0 5 42nS 0.1pS 0.1pS 48nS 96nS)
+v4 D 0 pulse (0 5 90nS 0.1pS 0.1pS 96nS 192nS)
+.MODEL P PMOS
+.MODEL N NMOS
+.TRAN 0 100N
+.end
+.END

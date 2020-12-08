@@ -31,12 +31,5 @@ probarC:
 	@vvp ./bin/PRUEBA_C
 	@gtkwave ./bin/prueba.vcd
 
-probarD:
-	@mkdir -p ./bin
-	@mkdir -p ./logs
-	@iverilog -o ./bin/PRUEBA_D ./test/checker.v ./src/parteC/counter4b.v ./testbench/testbench.v
-	@vvp ./bin/PRUEBA_D
-	@gtkwave ./bin/prueba.vcd
-
 clean:
 	rm -rf ./bin ./logs
