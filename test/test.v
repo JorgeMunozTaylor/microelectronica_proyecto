@@ -89,29 +89,4 @@ module test_1 #(
         $fdisplay(log, "********** Start simulation **********\n");
     end
 
-
-//    /**/
-//    `ifdef CONT_CICLO_MEDIO_4b
-//
-//        // Crea el archivo de logs.
-//        initial 
-//        begin
-//            log = $fopen (FILE); 
-//            $display ("\n\n********** Start simulation **********\n");
-//            $fdisplay(log, "********** Start simulation **********\n");
-//        end
-//
-//    /**/
-//    `else
-//        
-//        // Crea el archivo de logs.
-//        initial 
-//        begin
-//            log = $fopen (FILE); 
-//            $display ("\n\n********** Start simulation **********\n");
-//            $fdisplay(log, "********** Start simulation **********\n");
-//        end
-//
-//    `endif
-
 endmodule

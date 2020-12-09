@@ -1,5 +1,5 @@
 /*
-    Tarea 1
+    Proyecto final
     Microelectrónica
     Creado por Jorge Muñoz Taylor
     Carné A53863

@@ -45,7 +45,7 @@ module testbench;
 
 
     /* Instancia el contador */
-    counter DUV 
+    counter4b DUV 
     (
         .CLK    (clk),
         .ENABLE (enable), 

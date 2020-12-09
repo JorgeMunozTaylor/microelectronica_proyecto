@@ -33,7 +33,7 @@ Salidas:
     [out] RCO: Indica en ALTO durante UN CICLO cuando ocurrió el rebase.
     [out] LOAD: Se pone en ALTO cuando se seleccionó el modo 11, RESET es 0 y ENABLE es 1.
 */
-module counter 
+module counter4b 
 (
     input            CLK,
     input            ENABLE,

@@ -89,7 +89,7 @@ module counter32b
             /**/
             if (i==0)
             begin
-                counter count4b
+                counter4b count4b
                 (
                     .CLK    ( CLK           ),
                     .ENABLE ( ENABLE        ),
@@ -103,7 +103,7 @@ module counter32b
             end
             else
             begin
-                counter count4b
+                counter4b count4b
                 (
                     .CLK    ( ( MODO==`CARGA_D || RESET==`ALTO || (RESET==`BAJO && ENABLE==`BAJO) )? CLK: rco_wire[i-1] ),
                     .ENABLE ( ENABLE                                                                                    ),
